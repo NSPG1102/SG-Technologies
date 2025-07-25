@@ -268,7 +268,7 @@
 
     <section id="form">
       <h2>Candidate Information Form</h2>
-      <form action="https://formspree.io/f/myzpwyod" method="POST">
+      <form action="https://formspree.io/f/myzpwyod" method="POST" id="candidateForm">
         <input type="text" name="_gotcha" style="display:none" autocomplete="off" />
 
         <label for="full_name">Full Name:</label>
@@ -310,8 +310,9 @@
         <label for="entry_date">Date of First Entry to US:</label>
         <input id="entry_date" type="date" name="entry_date" required />
 
-        <label for="preferred_roles">Choose Your Preferred Job Roles:</label>
-        <select id="preferred_roles" name="preferred_roles[]" multiple size="7" required>
+        <label for="preferred_role">Choose Your Preferred Job Role:</label>
+        <select id="preferred_role" name="preferred_role" required>
+          <option value="">Select</option>
           <option value="Data Engineer">Data Engineer</option>
           <option value="Java Fullstack Developer / Engineer">Java Fullstack Developer / Engineer</option>
           <option value="SailPoint IAM Developer / Engineer">SailPoint IAM Developer / Engineer</option>
@@ -320,7 +321,9 @@
           <option value="Quality Analyst / Tester">Quality Analyst / Tester</option>
           <option value="Others">Others</option>
         </select>
-        <small>Hold Ctrl (Windows) or Cmd (Mac) to select multiple options</small>
+
+        <label for="other_role" id="other_role_label" style="display:none; margin-top:15px;">Please specify your preferred role:</label>
+        <input type="text" id="other_role" name="other_role" style="display:none;" />
 
         <div class="privacy-note">
           <strong>Note:</strong> Your data is collected securely. Please ensure you're using this form over a secure HTTPS connection.
@@ -345,7 +348,35 @@
   <footer>
     <p>&copy; 2025 SG Technologies. All rights reserved.</p>
   </footer>
+
+  <script>
+    const preferredRoleSelect = document.getElementById('preferred_role');
+    const otherRoleInput = document.getElementById('other_role');
+    const otherRoleLabel = document.getElementById('other_role_label');
+    const form = document.getElementById('candidateForm');
+
+    preferredRoleSelect.addEventListener('change', function () {
+      if (this.value === 'Others') {
+        otherRoleInput.style.display = 'block';
+        otherRoleLabel.style.display = 'block';
+        otherRoleInput.setAttribute('required', 'required');
+      } else {
+        otherRoleInput.style.display = 'none';
+        otherRoleLabel.style.display = 'none';
+        otherRoleInput.removeAttribute('required');
+        otherRoleInput.value = '';
+      }
+    });
+
+    // Optional: prevent submit if Others selected but input empty
+    form.addEventListener('submit', function (e) {
+      if (preferredRoleSelect.value === 'Others' && otherRoleInput.value.trim() === '') {
+        e.preventDefault();
+        alert('Please specify your preferred job role.');
+        otherRoleInput.focus();
+      }
+    });
+  </script>
 </body>
 
 </html>
-

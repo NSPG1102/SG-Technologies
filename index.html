@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SG Technologies | Shiva Goud</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('https://res.cloudinary.com/dlzuc9stg/image/upload/v1753460311/WhatsApp_Image_2025-07-25_at_9.46.12_PM_fvus8g.jpg') no-repeat center center fixed;
+            background-size: cover;
+            opacity: default;
+            position: relative;
+            min-height: 0vh;
+            scroll-behavior: smooth;
+        }
+
+
+        /* Dark overlay for text readability */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+
+        header {
+            background-color: rgba(44, 62, 80, 0.85);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+
+        header img {
+            max-height: 80px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+
+        header h1 {
+            margin: 0 0 0.25rem;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+
+        header p {
+            margin: 0;
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(26, 37, 47, 0.9);
+            padding: 0.75rem 0;
+            position: sticky;
+            top: 120px;
+            z-index: 99;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+
+        nav a:hover,
+        nav a:focus {
+            background-color: #007bff;
+            color: white;
+        }
+
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto 4rem;
+            background: rgba(26, 37, 47, 0.3);
+
+
+            opacity: default;
+
+
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            color: #fff;
+        }
+
+
+        main h2 {
+            font-size: 2rem;
+            margin-top: 0;
+            color: #fff;
+        }
+
+
+        main p,
+        main ul,
+        main label {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+
+        .contact a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1.5px solid #ccc;
+            font-size: 1rem;
+        }
+
+
+        textarea {
+            resize: vertical;
+        }
+
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+
+        .privacy-note {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #06c439;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            z-index: 110;
+        }
+
+
+        .whatsapp-button:hover {
+            background-color: #1ebe57;
+        }
+
+
+        .whatsapp-button img {
+            height: 22px;
+            margin-right: 10px;
+            filter: brightness(1) invert(1);
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+
+        @media (max-width: 640px) {
+            nav {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+
+            main {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <img src="https://res.cloudinary.com/dlzuc9stg/image/upload/v1753457844/logo_ghfyc0.jpg" alt="SG Technologies Logo" />
+        <h1>SG Technologies</h1>
+        <p>Empowering growth through exceptional IT hiring</p>
+    </header>
+
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#form">Candidate Form</a>
+    </nav>
+
+
+    <main>
+
+
+
+
+        <div class="shadow p-3 mb-5 bg-white rounded">
+
+
+            <section id="home">
+                <h2>Welcome to SG Technologies</h2>
+                <p>Hi, I'm <strong>Shiva Goud</strong>, founder of SG Technologies. We provide innovative IT Consulting and Services to help businesses thrive in the digital world.</p>
+            </section>
+
+
+            <section id="about">
+                <h2>About Me</h2>
+                <p>With a passion for technology and talent acquisition, I specialize in helping organizations scale through robust IT hiring and consulting strategies. With years of experience in the IT sector, SG Technologies is committed to driving success for our clients through tailored solutions.</p>
+            </section>
+
+
+            <section id="services">
+                <h2>Our Services</h2>
+                <ul>
+                    <li>IT Consulting and IT Services</li>
+                    <li>Staff Augmentation & Technical Hiring</li>
+                    <li>Project-based Software Solutions</li>
+                    <li>IT Strategy & Transformation</li>
+                </ul>
+            </section>
+
+
+
+
+
+
+            <section id="form">
+                <h2>Candidate Information Form</h2>
+                <form action="https://formspree.io/f/myzpwyod" method="POST">
+                    <input type="text" name="_gotcha" style="display:none" autocomplete="off" />
+
+
+                    <label for="full_name">Full Name:</label>
+                    <input id="full_name" type="text" name="full_name" required autocomplete="name" />
+
+
+                    <label for="contact">Contact Number:</label>
+                    <input id="contact" type="tel" name="contact" required autocomplete="tel" />
+
+
+                    <label for="email">Email ID:</label>
+                    <input id="email" type="email" name="email" required autocomplete="email" />
+
+
+                    <label for="address">Full Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+
+
+                    <label for="dob">Date of Birth:</label>
+                    <input id="dob" type="date" name="dob" required />
+
+
+                    <label for="ssn_last5">Last 5 SSN Digits:</label>
+                    <input id="ssn_last5" type="text" name="ssn_last5" maxlength="5" pattern="\d{5}" required />
+
+
+                    <label for="bachelor_degree">Bachelor's Degree:</label>
+                    <input id="bachelor_degree" type="text" name="bachelor_degree" required />
+
+
+                    <label for="master_degree">Master's Degree:</label>
+                    <input id="master_degree" type="text" name="master_degree" />
+
+
+                    <label for="visa_status">Visa Status:</label>
+                    <select id="visa_status" name="visa_status" required>
+                        <option value="">Select</option>
+                        <option value="H1B">H1B</option>
+                        <option value="L1">L1</option>
+                        <option value="OPT">OPT</option>
+                        <option value="CPT">CPT</option>
+                        <option value="Green Card">Green Card</option>
+                        <option value="Citizen">Citizen</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+
+                    <label for="entry_date">Date of First Entry to US:</label>
+                    <input id="entry_date" type="date" name="entry_date" required />
+
+
+                    <div class="privacy-note">
+                        <strong>Note:</strong> Your data is collected securely. Please ensure you're using this form over a secure HTTPS connection.
+                    </div>
+
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </div>
+        <section id="contact" class="contact">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:shivanalla.official@gmail.com">shivanalla.official@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919553474959">+91 95534 74959</a></p>
+        </section>
+    </main>
+
+
+    <a class="whatsapp-button" href="https://wa.me/919553474959" target="_blank" rel="noopener">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        Chat with us
+    </a>
+
+
+    <footer>
+        <p>&copy; 2025 SG Technologies. All rights reserved.</p>
+    </footer>
+</body>
+
+
+</html>
+
+
+Tab 2

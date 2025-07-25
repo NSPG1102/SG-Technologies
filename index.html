@@ -310,30 +310,26 @@
         <label for="entry_date">Date of First Entry to US:</label>
         <input id="entry_date" type="date" name="entry_date" required />
 
-        <label for="jobrole">Choose Your Preferred Job Role:</label>
-        <select id="jobrole" name="Preferred Job Role" required>
-          <option value="">-- Select Job Role --</option>
-          <option value="Data Engineer">Data Engineer</option>
-          <option value="Java Fullstack Developer / Engineer">Java Fullstack Developer / Engineer</option>
-          <option value="SailPoint IAM Developer / Engineer">SailPoint IAM Developer / Engineer</option>
-          <option value="Business Analyst">Business Analyst</option>
-          <option value="Data Analyst">Data Analyst</option>
-          <option value="Quality Analyst / Tester">Quality Analyst / Tester</option>
-          <option value="Others">Others</option>
-        </select>
+        <label for="preferred-role">Choose Your Preferred Job Roles</label>
+      <select id="preferred-role" name="Preferred Job Role" required>
+        <option value="">-- Select Preferred Job Role --</option>
+        <option value="Data Engineer">Data Engineer</option>
+        <option value="Java Fullstack Developer">Java Fullstack Developer / Engineer</option>
+        <option value="SailPoint IAM Developer">SailPoint IAM Developer / Engineer</option>
+        <option value="Business Analyst">Business Analyst</option>
+        <option value="Data Analyst">Data Analyst</option>
+        <option value="Quality Analyst">Quality Analyst / Tester</option>
+        <option value="Others">Others</option>
+      </select>
 
-        <label for="resume">Upload Resume:</label>
-        <input type="file" id="resume" name="Resume" accept=".pdf,.doc,.docx" required />
+      <label for="resume">Upload Resume</label>
+      <input type="file" id="resume" name="Resume" accept=".pdf,.doc,.docx" required />
 
-        <label for="dl">Upload Driver's License:</label>
-        <input type="file" id="dl" name="Driver's License" accept=".pdf,.jpg,.png,.jpeg" required />
+      <label for="dl">Upload Driver’s License</label>
+      <input type="file" id="dl" name="Driver's License" accept=".pdf,.jpg,.png" />
 
-        <label for="visaCopy">Upload Visa Copy:</label>
-        <input type="file" id="visaCopy" name="Visa Copy" accept=".pdf,.jpg,.png,.jpeg" required />
-
-        <div class="privacy-note">
-          <strong>Note:</strong> Your data is collected securely. Please ensure you're using this form over a secure HTTPS connection.
-        </div>
+      <label for="visa-copy">Upload Visa Copy</label>
+      <input type="file" id="visa-copy" name="Visa Copy" accept=".pdf,.jpg,.png" />
 
         <button type="submit">Submit</button>
       </form>

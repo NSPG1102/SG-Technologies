@@ -267,73 +267,64 @@
     </section>
 
     <section id="form">
-      <h2>Candidate Information Form</h2>
-      <form action="https://formspree.io/f/mblkkqbl" method="POST" enctype="multipart/form-data">
-        <input type="text" name="_gotcha" style="display:none" autocomplete="off" />
+  <h2>Candidate Information Form</h2>
+  <form action="https://formspree.io/f/mblkkqbl" method="POST">
+    <input type="text" name="_gotcha" style="display:none" autocomplete="off" />
 
-        <label for="full_name">Full Name:</label>
-        <input id="full_name" type="text" name="full_name" required autocomplete="name" />
+    <label for="full_name">Full Name:</label>
+    <input id="full_name" type="text" name="full_name" required autocomplete="name" />
 
-        <label for="contact">Contact Number:</label>
-        <input id="contact" type="tel" name="contact" required autocomplete="tel" />
+    <label for="contact">Contact Number:</label>
+    <input id="contact" type="tel" name="contact" required autocomplete="tel" />
 
-        <label for="email">Email ID:</label>
-        <input id="email" type="email" name="email" required autocomplete="email" />
+    <label for="email">Email ID:</label>
+    <input id="email" type="email" name="email" required autocomplete="email" />
 
-        <label for="address">Full Address:</label>
-        <textarea id="address" name="address" rows="3" required></textarea>
+    <label for="address">Full Address:</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
 
-        <label for="dob">Date of Birth:</label>
-        <input id="dob" type="date" name="dob" required />
+    <label for="dob">Date of Birth:</label>
+    <input id="dob" type="date" name="dob" required />
 
-        <label for="ssn_last5">Last 5 SSN Digits:</label>
-        <input id="ssn_last5" type="text" name="ssn_last5" maxlength="5" pattern="\d{5}" required />
+    <label for="ssn_last5">Last 5 SSN Digits:</label>
+    <input id="ssn_last5" type="text" name="ssn_last5" maxlength="5" pattern="\d{5}" required />
 
-        <label for="bachelor_degree">Bachelor's Degree:</label>
-        <input id="bachelor_degree" type="text" name="bachelor_degree" required />
+    <label for="bachelor_degree">Bachelor's Degree:</label>
+    <input id="bachelor_degree" type="text" name="bachelor_degree" required />
 
-        <label for="master_degree">Master's Degree:</label>
-        <input id="master_degree" type="text" name="master_degree" />
+    <label for="master_degree">Master's Degree:</label>
+    <input id="master_degree" type="text" name="master_degree" />
 
-        <label for="visa_status">Visa Status:</label>
-        <select id="visa_status" name="visa_status" required>
-          <option value="">Select</option>
-          <option value="H1B">H1B</option>
-          <option value="L1">L1</option>
-          <option value="OPT">OPT</option>
-          <option value="CPT">CPT</option>
-          <option value="Green Card">Green Card</option>
-          <option value="Citizen">Citizen</option>
-          <option value="Other">Other</option>
-        </select>
+    <label for="visa_status">Visa Status:</label>
+    <select id="visa_status" name="visa_status" required>
+      <option value="">Select</option>
+      <option value="H1B">H1B</option>
+      <option value="L1">L1</option>
+      <option value="OPT">OPT</option>
+      <option value="CPT">CPT</option>
+      <option value="Green Card">Green Card</option>
+      <option value="Citizen">Citizen</option>
+      <option value="Other">Other</option>
+    </select>
 
-        <label for="entry_date">Date of First Entry to US:</label>
-        <input id="entry_date" type="date" name="entry_date" required />
+    <label for="entry_date">Date of First Entry to US:</label>
+    <input id="entry_date" type="date" name="entry_date" required />
 
-        <label for="preferred-role">Choose Your Preferred Job Roles</label>
-      <select id="preferred-role" name="Preferred Job Role" required>
-        <option value="">-- Select Preferred Job Role --</option>
-        <option value="Data Engineer">Data Engineer</option>
-        <option value="Java Fullstack Developer">Java Fullstack Developer / Engineer</option>
-        <option value="SailPoint IAM Developer">SailPoint IAM Developer / Engineer</option>
-        <option value="Business Analyst">Business Analyst</option>
-        <option value="Data Analyst">Data Analyst</option>
-        <option value="Quality Analyst">Quality Analyst / Tester</option>
-        <option value="Others">Others</option>
-      </select>
+    <label for="preferred-role">Choose Your Preferred Job Roles</label>
+    <select id="preferred-role" name="preferred_role" required>
+      <option value="">-- Select Preferred Job Role --</option>
+      <option value="Data Engineer">Data Engineer</option>
+      <option value="Java Fullstack Developer">Java Fullstack Developer / Engineer</option>
+      <option value="SailPoint IAM Developer">SailPoint IAM Developer / Engineer</option>
+      <option value="Business Analyst">Business Analyst</option>
+      <option value="Data Analyst">Data Analyst</option>
+      <option value="Quality Analyst">Quality Analyst / Tester</option>
+      <option value="Others">Others</option>
+    </select>
 
-      <label for="resume">Upload Resume</label>
-      <input type="file" id="resume" name="Resume" accept=".pdf,.doc,.docx" required />
-
-      <label for="dl">Upload Driver’s License</label>
-      <input type="file" id="dl" name="Driver's License" accept=".pdf,.jpg,.png" />
-
-      <label for="visa-copy">Upload Visa Copy</label>
-      <input type="file" id="visa-copy" name="Visa Copy" accept=".pdf,.jpg,.png" />
-
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+    <button type="submit">Submit</button>
+  </form>
+</section>
 
     <section id="contact" class="contact">
       <h3>Contact</h3>
